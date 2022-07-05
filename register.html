@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="./css/jobs.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="mybg-gra m-0 p-0">
+        <!-- NavBar Start -->
+
+        <nav class="navbar navbar-expand-lg col-12 navbar-light m-0 sticky-top mybg-gra border-bottom border-light">
+            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo01">
+                <a class="text-center col-sm-12 col-md-3 mylogo text-center text-light" href="#">JOBS.COM</a>
+                <ul class="navbar-nav mx-auto text-center mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light myNavItems" href="./index.html#home">Home<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light myNavItems" href="./search_jobs.html">Search Job</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light myNavItems" href="./index.html##aboutus">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light myNavItems" href="./index.html#contact_us">Contact US</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 mx-auto row my-lg-0">
+                    <button class="btn btn-outline-light col-md-12 w-100 col-sm-8  my-2 mx-2 my-sm-0"
+                        onclick="redirect('./login.html')" type="submit">Register</button>
+                </form>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <div class="col-12 p-3 ">
+
+            <form class="col-11 mybg row mx-auto rounded p-3">
+                <div class="col-12 text-center">
+                    <h2 class="lbl-Col">Registration</h2>
+
+                </div>
+                <div class="col-lg-6 m-0 text-left p-0 col-sm-12">
+
+
+                    <label class="col-md-3 col-sm-12 mt-3 h6" for="first_name_reg">First Name</label>
+                    <input type="text" class="col-md-8 col-sm-10  reg-in-class" id="first_name_reg"
+                        onchange="checkInputs('first_name_reg', 'Please Paste Your First Name', 'errorMessageforRegFirstName', false)"
+                        name="FirstName" maxlength="50" placeholder="First name">
+                    <p id="errorMessageforRegFirstName" class="h6 text-center mx-auto text-danger"
+                        style="visibility:hidden;"> error message</p>
+
+
+                    <label class="col-md-3 col-sm-12 h6" for="last_name_reg">Last Name</label>
+                    <input type="text" class="col-md-8 col-sm-10 reg-in-class" id="last_name_reg"
+                        onchange="checkInputs('first_name_reg', 'Please Paste Your First Name', 'errorMessageforRegLastName', false)"
+                        name="LastName" maxlength="50" placeholder="Last name">
+                    <p id="errorMessageforRegLastName" class="h6 text-center mx-auto text-danger"
+                        style="visibility:hidden;"> error message</p>
+
+                    <label class="col-md-3 col-sm-12 h6 " for="email_reg">Email Address</label>
+                    <input type="email" class="col-md-8 col-sm-10 reg-in-class" id="email_reg"
+                        onchange="checkInputs('email_reg', 'Please Paste Your Email', 'errorMessageforRegEmail', true)"
+                        name="regEmail" maxlength="100" placeholder="Email Address">
+                    <p id="errorMessageforRegEmail" class="h6 text-center mx-auto text-danger"
+                        style="visibility:hidden;"> error message</p>
+
+
+                    <label class="col-md-3 col-sm-12 h6 " for="mobile_reg">Mobile</label>
+                    <input type="number" class="col-md-8 col-sm-10 reg-in-class" id="mobile_reg" name="mobile"
+                        maxlength="10" placeholder="Mobile Number">
+                    <p id="errorMessagefrRegMobile" class="h6 text-center mx-auto text-danger"
+                        style="visibility:hidden;"> error message</p>
+
+                    <label class="col-3 text-left h6" for="Gender">Gender</label>
+                    <input type="radio" name="Gender" class="" value="Male"> Male
+                    <input type="radio" class="" name="Gender" value="Female"> Female
+                    <br>
+
+
+                    <label class="col-md-3 col-sm-12 mt-3  h6" for="date_of_birth_reg"> Date of Birth</label>
+                    <input type="date" class="col-md-8 col-sm-10 reg-in-class" id="date_of_birth_reg"
+                        onchange="checkInputs('date_of_birth_reg', 'Please Select Your Date of Birth', 'errorMessageforRegDate', false)"
+                        name="dob" placeholder="Date of Birth">
+                    <p id="errorMessageforRegDate" class="h6 text-center mx-auto text-danger"
+                        style="visibility:hidden;"> error message</p>
+
+                    <label class="col-md-3 col-sm-12  h6" for="address_reg">Address</label>
+                    <textarea name="Address" class="col-md-8 col-sm-10 reg-in-class" rows="3"
+                        onchange="checkInputs('address_reg', 'Please Paste Your Address', 'errorMessageforRegAdress', false)"
+                        id="address_reg" cols="50"></textarea>
+                    <p id="errorMessageforRegAdress" class="h6 text-center mx-auto text-danger"
+                        style="visibility:hidden;"> error message</p>
+
+                    <label class="col-md-3 col-sm-12  h6" for="city_reg">City</label>
+                    <input type="text" class="col-md-8 col-sm-10 reg-in-class" id="city_reg" name="LastName"
+                        onchange="checkInputs('city_reg', 'Please Select Your City', 'errorMessageforRegCity', false)"
+                        maxlength="50" placeholder="City">
+                    <p id="errorMessageforRegCity" class="h6 text-center mx-auto text-danger"
+                        style="visibility:hidden;"> error message</p>
+
+                    <label class="col-md-3 col-sm-12  h6" for="pincode_reg">Pin-code</label>
+                    <input type="Number" class="col-md-8 col-sm-10 reg-in-class" id="pincode_reg" name="PinCode"
+                        maxlength="6" placeholder="Pin-code">
+                    <p id="errorMessagefrRegPincode" class="h6 text-center mx-auto text-danger"
+                        style="visibility:hidden;"> error message</p>
+
+
+                    <label class="col-md-3 col-sm-12  h6" for="state_reg">State</label>
+                    <input type="text" class="col-md-8 col-sm-10 reg-in-class" id="state_reg"
+                        onchange="checkInputs('state_reg', 'Please Select Your State', 'errorMessageforRegState', false)"
+                        name="State" maxlength="50" placeholder="State">
+                    <p id="errorMessageforRegState" class="h6 text-center mx-auto text-danger"
+                        style="visibility:hidden;"> error message</p>
+
+                    <label class="col-md-3 col-sm-12  h6" for="country_reg">Country</label>
+                    <input type="text" class="col-md-8 col-sm-10 reg-in-class" id="country_reg"
+                        onchange="checkInputs('country_reg', 'Please Select Your Country', 'errorMessageforRegCountry', false)"
+                        name="Country" placeholder="India">
+                    <p id="errorMessageforRegCountry" class="h6 text-center mx-auto text-danger"
+                        style="visibility:hidden;"> error message</p>
+
+                </div>
+
+                <div class="col-lg-6 m-0 p-0 text-left col-sm-12">
+                    <div class="col-12 row mt-3">
+                        <label class="col-12 mx-0 h6">Hobbies</label>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="checkbox" class="mx-1 mt-2 " name="HobbyDrawing" value="Drawing"><label>
+                                Drawing</label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="checkbox" class="mx-1 mt-2 " name="HobbySinging" value="Singing"><label>
+                                Singing</label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="checkbox" class="mx-1 mt-2 " name="HobbyDancing" value="Dancing"><label>
+                                Dancing</label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="checkbox" class="mx-1 mt-2 " name="HobbyCooking" value="Cooking"><label>
+                                Sketching</label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="checkbox" class="mx-1 mt-2 " name="HobbyOther" id="otherHobies"
+                                value="Other"><label> Others</label>
+
+                        </div>
+                    </div>
+
+                    <input type="text" id="otherHobbiesText" name="Other_Hobby" class="col-10 mt-3 reg-in-class "
+                        maxlength="50" placeholder="Ex- Teaching">
+
+
+
+                    <div class=" col-12 mt-3 row">
+                        <label for="" class="col-12 text-left h6">Higher Qualification</label>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="radio" class="mx-1 mt-2" name="HighSchool" value="High School"><label> High
+                                School(10th)</label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="radio" class="mx-1 mt-2" name="HigherSchool" value="Higher School"><label>
+                                Higher School(12th)</label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="radio" class="mx-1 mt-2" name="Graduation" value="Graduation"><label>
+                                Graduation(Bachelors)</label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="radio" class="mx-1 mt-2" name="PostGraduation" value="Post Graduation"><label>
+                                Post Graduation(Masters)</label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="radio" class="mx-1 mt-2" name="Phd" value="Phd"><label> Phd</label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="radio" class="mx-1 mt-2" name="other_qua" value="Other"><label>Others</label>
+                        </div>
+                    </div>
+                    <input type="text" name="Other" maxlength="50" class="col-10 mt-3  reg-in-class"
+                        placeholder="Other">
+
+                    <div class="text-left mt-3 row ">
+                        <label for="file" class="col-md-3 col-sm-12 mx-0">Upload Resume</label>
+                        <input id="file" type="file" class="col-md-6 col-sm-12 my-auto reg-in-class" name="file">
+                    </div>
+                    <!-- <p id="errorMessageforRegLastName" class="h6 text-center mx-auto text-danger" style="visibility:hidden;"> error message</p> -->
+
+
+
+                    <div class="mx-0 mt-3 row p-0 text-center">
+
+                        <label for="job" class="col-12 mx-0 mt-3 text-left  h6"> Job Field</label>
+
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="radio" class=" mx-1 mt-2" name="job" value="cs"><label> Computer
+                                Engineering</label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="radio" class=" mx-1 mt-2" name="job" value="me"><label> Mechanical Engineering
+                            </label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="radio" class=" mx-1 mt-2" name="job" value="ce"><label> Civil
+                                Engineering</label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="radio" class=" mx-1 mt-2" name="job" value="mba"><label> MBA</label>
+                        </div>
+                        <div class="row text-center col-sm-12 col-md-6">
+                            <input type="radio" class=" mx-1 mt-2 reg-in-class" name="job" value="ds"><label> Data
+                                Science</label>
+                        </div>
+                    </div>
+
+                    <label for="pass_reg" class="col-4 col-s mt-3 h6">Password</label>
+                    <input type="password" class="col-7 mt-1 reg-in-class"
+                        onchange="checkInputs('pass_reg', 'Please Select Your Password', 'errorMessageforRegPass', false)"
+                        id="pass_reg" name="password">
+                    <p id="errorMessageforRegPass" class="h6 text-center mx-auto text-danger"
+                        style="visibility:hidden;"> error message</p>
+
+
+
+
+                    <label for="con_pass_reg" class="col-4 mt-3 h6">Confirm Password</label>
+                    <input type="password" id="con_pass_reg" class="col-7 mt-1 reg-in-class"
+                        onchange="checkInputs('con_pass_reg', 'Please Confirm your Password', 'errorMessageforRegConPass', false)"
+                        name="password">
+                    <p id="errorMessageforRegConPass" class="h6 text-center mx-auto text-danger"
+                        style="visibility:hidden;"> error message</p>
+
+
+                    <div class="col-12 mt-2 row">
+                        <input type="button" onclick="Register()"
+                            class="w-40 col-5 rounded bg-primary mx-auto p-1 sub_btns" value="Submit" id="con_submit">
+                        <input type="reset" onclick="" class="w-40 col-5 rounded  bg-danger p-1 sub_btns " value="Reset"
+                            id="con_cancel">
+
+                    </div>
+
+                    <!-- <input type="button" class="col-5  mx-auto" onclick="checkValue()" value="Submit">
+                    <input type="button" class="col-5  mx-auto" value="Reset"> -->
+                </div>
+
+
+
+            </form>
+
+        </div>
+
+
+
+        <!-- Footer  -->
+        <div class="py-3 px-0 text-light m-0 row">
+            <div class="col-md-6 col-sm-12 d-flex my-3 flex-column justify-content-between ">
+                <a class="mylogo text-light  mx-auto" href="./index.html#home">JOBS.COM</a>
+                <p class="text-center h6 pl-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque nobis
+                    consequuntur eius reprehenderit.</p>
+                <div class="row mx-auto">
+                    <img src="./images/facebook.png" width="50px" onclick="redirect('https://www.facebook.com/')"
+                        class="bg-primary rounded mr-2" alt="">
+                    <img src="./images/instagram.png" width="50px"
+                        onclick="redirect('https://www.instagram.com/accounts/login/')"
+                        class="bg-primary rounded p-1 mr-2" alt="">
+                    <img src="./images/twitter.png" width="50px" onclick="redirect('https://twitter.com/login?lang=en')"
+                        class="bg-primary rounded mr-2" alt="">
+                    <img src="./images/linkedin.png" width="50px" onclick="redirect('https://www.linkedin.com')"
+                        class="mr-2 bg-primary rounded p-1" alt="">
+
+
+                </div>
+
+            </div>
+            <div class="col-md-6 col-sm-12 p-0 mx-0 mt-5 text-center row">
+                <h4 class="col-12 "> Subscribe Newsletter</h4>
+                <p class="col-12 h6">Subscribe newsletter to get updates about new Jobs</p>
+                <div class="col-12">
+                    <input type="text" class="w-100 my-1 col-md-8 col-sm-12 h6 rounded p-2 subIn "
+                        onchange="checkInputs('sub_email','Please Paste your Email Address','errorMessage')" name=""
+                        id="sub_email" placeholder="Enter Your Email here!">
+
+                </div>
+                <p id="errorMessage" class="h6 text-center mx-auto text-danger" style="visibility:hidden;"> error
+                    message</p>
+                <div class="col-12">
+                    <input type="button" onclick="subscribe()"
+                        class="col-md-8 h5 rounded btn btn-primary p-1 col-sm-12 w-100 my-1 " name=" " id="sub_btn"
+                        value="Submit ">
+                </div>
+            </div>
+            <div class="copyright col-12 text-center mt-3 ">
+                <p class="h6">Copyright &#169;2021 All rights reserved | This website is made with <label
+                        class="heart ">&#10084;</label> </p>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+    </div>
+
+
+    <script src="./js/jobs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js "
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
+        crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js "
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 "
+        crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js "
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy "
+        crossorigin="anonymous "></script>
+
+</body>
+
+
+</html>
